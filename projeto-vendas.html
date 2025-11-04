@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local Arte & Décor • Feito à mão com história</title>
+    <meta
+      name="description"
+      content="Artesanato brasileiro e açoriano em Florianópolis, curadoria Local Arte & Décor. Peças autorais, decoração e cultura."
+    />
+    <link rel="stylesheet" href="projeto-vendas.css" />
+  </head>
+  <body>
+    <!-- Barra informativa -->
+    <div class="topbar" role="status" aria-live="polite"></div>
+
+    <header class="site-header">
+      <div class="area-logo">
+        <img src="img/logo.jpeg" alt="Local Arte e Décor" class="logo" />
+        <button class="botao-menu" aria-controls="nav" aria-expanded="false">
+          <span class="sr-only">Abrir menu</span>☰
+        </button>
+      </div>
+
+      <div class="container header-row">
+        <nav id="nav" class="site-nav" aria-label="Principal">
+          <ul>
+            <li><a href="#categorias">Categorias</a></li>
+            <li><a href="#vitrine">Produtos</a></li>
+            <li><a href="#historia">Nossa história</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+
+        <form
+          class="search"
+          role="search"
+          aria-label="Buscar produtos"
+          action="#"
+          method="get"
+        >
+          <label for="q" class="sr-only">Buscar</label>
+          <input
+            id="q"
+            name="q"
+            type="search"
+            placeholder="Buscar peças e materiais"
+          />
+          <button class="btn" type="submit">Buscar</button>
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <!-- Herói -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1>Arte com alma, peças com história</h1>
+            <p>
+              Curadoria de artesanato brasileiro e açoriano em Florianópolis,
+              seleção autoral para decorar e presentear.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#vitrine">Comprar agora</a>
+              <a class="btn btn-ghost" href="#historia">Conheça a história</a>
+            </div>
+          </div>
+          <figure class="hero-figure">
+            <img
+              src="img/loja-fachada.jpg"
+              alt="Fachada da loja Local Arte & Décor em Santo Antônio de Lisboa"
+            />
+            <figcaption>
+              Local Arte & Décor em Santo Antônio de Lisboa
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Categorias -->
+      <section id="categorias" class="section">
+        <div class="container">
+          <h2 class="section-title">Categorias em destaque</h2>
+          <div class="grid-cards">
+            <a class="card cat" href="#">
+              <img src="img/cat-decoracao.jpg" alt="Categoria Decoração" />
+              <div class="card-body">
+                <h3>Decoração</h3>
+                <p>Vasos, luminárias e madeira autoral</p>
+              </div>
+            </a>
+
+            <a class="card cat" href="#">
+              <img
+                src="img/Cocar-Palha-1.jpeg"
+                alt="Categoria Arte Indígena"
+                height="200"
+                width="300"
+              />
+              <div class="card-body">
+                <h3>Arte Indígena</h3>
+                <p>Cestaria, cerâmica e saberes tradicionais</p>
+              </div>
+            </a>
+
+            <a class="card cat" href="#">
+              <img src="img/cat-esoterico.jpeg" alt="Categoria Esotérico" />
+              <div class="card-body">
+                <h3>Esotérico</h3>
+                <p>Incensos, pedras e bem-estar</p>
+              </div>
+            </a>
+
+            <a class="card cat" href="#">
+              <img src="img/cat-mar.jpg" alt="Categoria Decoração do Mar" />
+              <div class="card-body">
+                <h3>Decoração do Mar</h3>
+                <p>Barcos, conchas e referências açorianas</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vitrine -->
+      <section id="vitrine" class="section">
+        <div class="container">
+          <h2 class="section-title">Seleção do ateliê</h2>
+          <div class="grid-cards">
+            <article class="card product" aria-labelledby="p1-title">
+              <img
+                src="img/prod-1.jpg"
+                alt="Vaso de cerâmica com acabamento natural"
+              />
+              <div class="card-body">
+                <h3 id="p1-title">Vaso Barro Natural</h3>
+                <p class="price">R$ 149,00</p>
+                <button class="btn btn-primary" type="button">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+
+            <article class="card product" aria-labelledby="p2-title">
+              <img src="img/prod-2.jpg" alt="Luminária de bambu trançado" />
+              <div class="card-body">
+                <h3 id="p2-title">Luminária Bambu</h3>
+                <p class="price">R$ 219,00</p>
+                <button class="btn btn-primary" type="button">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+
+            <article class="card product" aria-labelledby="p3-title">
+              <img src="img/prod-3.jpg" alt="Barco decorativo de madeira" />
+              <div class="card-body">
+                <h3 id="p3-title">Barco Decorativo</h3>
+                <p class="price">R$ 179,00</p>
+                <button class="btn btn-primary" type="button">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+
+            <article class="card product" aria-labelledby="p4-title">
+              <img
+                src="img/prod-4.jpg"
+                alt="Conjunto de conchas para decoração"
+              />
+              <div class="card-body">
+                <h3 id="p4-title">Conchas Seleção</h3>
+                <p class="price">R$ 89,00</p>
+                <button class="btn btn-primary" type="button">
+                  Adicionar ao carrinho
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Prova social -->
+      <section class="section section-muted">
+        <div class="container">
+          <h2 class="section-title">Quem já visitou recomenda</h2>
+          <ul class="ratings" aria-label="Avaliações de clientes">
+            <li>
+              <p>“Atendimento excelente e peças únicas.”</p>
+              <span aria-hidden="true">★★★★★</span>
+              <span class="sr-only">Cinco estrelas</span>
+            </li>
+            <li>
+              <p>“Curadoria linda, dá vontade de levar tudo.”</p>
+              <span aria-hidden="true">★★★★★</span>
+              <span class="sr-only">Cinco estrelas</span>
+            </li>
+            <li>
+              <p>“Entrega rápida em Floripa e embalagem caprichada.”</p>
+              <span aria-hidden="true">★★★★★</span>
+              <span class="sr-only">Cinco estrelas</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- História -->
+      <section id="historia" class="section">
+        <div class="container narrow">
+          <h2 class="section-title">Nossa história</h2>
+          <p>
+            Começamos com a vontade de aproximar pessoas de peças que carregam
+            memória. Cada artista tem um caminho, cada obra tem origem, nosso
+            trabalho é cuidar dessa ponte.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Local Arte & Décor</h3>
+          <address>
+            Rua 15 de Novembro, 193, Santo Antônio de Lisboa, Florianópolis<br />
+            WhatsApp: +55 48 98860 0966
+          </address>
+        </div>
+
+        <nav aria-label="Institucional">
+          <ul>
+            <li><a href="#">Política de troca</a></li>
+            <li><a href="#">Envio e prazos</a></li>
+            <li><a href="#">Privacidade</a></li>
+          </ul>
+        </nav>
+
+        <form
+          class="newsletter"
+          aria-label="Assinar novidades"
+          action="#"
+          method="post"
+        >
+          <label for="mail">Receba novidades</label>
+          <div class="row">
+            <input
+              id="mail"
+              name="email"
+              type="email"
+              placeholder="Seu e-mail"
+              required
+            />
+            <button class="btn" type="submit">Assinar</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="copy">
+        <small
+          >© <span id="year"></span> Local Arte & Décor. Todos os direitos
+          reservados.</small
+        >
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
