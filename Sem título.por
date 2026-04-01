@@ -1,23 +1,33 @@
 programa {
   funcao inicio() {
- //[Telles Transportes](/333d393ff68e8014958dc16afadb160c?pvs=25) e o preço do frete
+     //[Telles Transportes]
    
     // caso 1
-  inteiro  frete = 15
+  
   inteiro peso = 20
   inteiro distancia = 650
-  inteiro volume = 1 
-  escreva( frete + (peso*2) + 0.05*distancia + (10*volume) )
+  real volume = 1 
+  real frete = 15 + (peso*2) + (0.05*distancia) + (10*volume)
+  escreva(frete) 
 
 
-  // casso 2
-  frete = 15
+  // caso 2
+
   peso = 60
   distancia = 1000
-   volume = 0.5
-  escreva( frete + (peso*2) + 0.05*distancia + (0.5*volume) )
+  volume = 0.5
+  frete = 15 + (peso*2) + (0.05*distancia) + (10*volume)
+  escreva("\n", frete)
 
+// caso 3
+ peso = 3
+  distancia = 1200
+  volume = 0.2
+  frete = 15 + (peso*2) + (0.05*distancia) + (10*volume)
+  escreva("\n", frete)
 
 
   }
 }
+  
+
