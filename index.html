@@ -1,22 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt-br"> 
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Random</title>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Nubank</title>
 </head>
+
 <body>
-    <img src="./img/dev_sorteio.png">
+    <header>
+        <img src="./img/img/logo do nubank.png" alt="logo do nubank" class="logo-img">
+        <nav>
+            <a href="#">Nubank</a>
+            <a href="#">Nubank Ultravioleta</a>
+            <a href="#">Nu Empresas</a>
+            <a href="#">Segurança</a>
+            <a href="#">Saiba mais</a>
+        </nav>
+        <a href="#" class="btn-Nubank">Quero ser Nubank</a>
+    </header>
 
-    <h2>Sortear um Número</h2>
-    <div>
-        <input placeholder="entre" class="input-min" type="number">
-        <input placeholder="e" class="input-max" type="number">
-    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Vote no nome da arena e veja o seu nome aparecer lá</h1>
+                <a href="#" class="btn-Nubank">Votar Agora</a>
+            </div>
 
-    <button onclick="generateNumber()">Sortear</button>
+            <div class="hero-card">
+                <h3>Peça seu Cartão de Crédito e sua Conta do Nubank</h3>
+                <label>Digite seu CPF</label>
+                <input type="text" placeholder="000.000.000-00">
+                <button class="btn-confirm">confirmar</button>
+            </div>
+        </div>
+    </section>
 
-    <script src="scripts.js"></script>
+    <section class="services">
+        <a href="#">Conta do Nubank</a>
+        <a href="#">Cartão do Nubank</a>
+        <a href="#">Seguro Nubank</a>
+        <a href="#">Nu celular</a>
+        <a href="#">Shopping</a>
+        <a href="#">Investimentos</a>
+        <a href="#">Empréstimo</a>
+    </section>
+
+    <section class="card-section">
+        <div class="caredit-card">
+            <div class="card-chip"></div>
+            <p class="card-number">.... .... .... 5435</p>
+            <div class="card-info">
+                <span>Jean Dhominic</span>
+                <strong>Nu</strong>
+            </div>
+        </div>
+
+        <div class="card-text">
+            <h2>O cartão que você controla</h2>
+            <p>Sem anuidade, sem complicação, com limites que acompanham você e notificações instantâneas a cada compra.</p>
+            <ul>
+                <li>Sem anuidade, para sempre</li>
+                <li>Programas de pontos e cashback</li>
+                <li>Aceito em milhões de estabelecimentos</li>
+                <li>Bloqueio e desbloqueio pelo app</li>
+            </ul>
+            <a class="btn-purole" href="#">Pedir meu Cartão</a>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Pronto pra simplificar sua vida financeira?</h2>
+        <p>Abra sua conta em minutos. Sem filas, sem papelada, sem burocracia.</p>
+        <a href="#" class="btn-cta">Abrir sua conta grátis</a>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-first-child">
+                <img src="./img/logo.png" alt="logo do nubank" class="footer-logo">
+                <p>© 2026 Nu Pagamentos S.A. Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Produtos</h4>
+                <a href="#">Conta do Nubank</a>
+                <a href="#">Cartão de crédito</a>
+                <a href="#">Investimentos</a>
+                <a href="#">Empréstimo</a>
+            </div>
+            <div class="footer-links">
+                <h4>Nubank</h4>
+                <a href="#">Sobre nós</a>
+                <a href="#">Carreiras</a>
+                <a href="#">Imprensa</a>
+               <a href="#">Comunidade</a>
+            </div>
+            <div class="footer-links">
+                <h4>Ajuda</h4>
+                <a href="#">Central de ajuda</a>
+                <a href="#">Blog</a>
+                <a href="#">Segurança</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+        <p class="footer-bottom">© 2026 Nubank -- Devclub. Todos os direitos reservados.</p>
+    </footer>
 </body>
+
 </html>
