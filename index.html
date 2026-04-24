@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Projeto Web - Grêmio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://www.youtube.com/s/desktop/1b8c9e5e/img/favicon_32.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header id="masthead">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="btn-icon"><i class="fas fa-bars"></i></button>
+                <div class="logo">
+                    <i class="fab fa-youtube" style="color: red; font-size: 32px;"></i>
+                    <span style="font-weight: bold; letter-spacing: -1px; font-size: 24px;">YouTube</span>
+                </div>
+            </div>
+
+            <div class="header-center">
+                <div class="search-box">
+                    <input type="text" placeholder="Pesquisar">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="mic-btn"><i class="fas fa-microphone"></i></button>
+            </div>
+
+            <nav class="header-right">
+                <ul class="nav-list">
+                    <li><button class="btn-icon"><i class="fas fa-video"></i></button></li>
+                    <li><button class="btn-icon"><i class="far fa-bell"></i></button></li>
+                    <li><img src="./img/conta.logo.jpg" alt="Perfil" class="profile-pic"></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="layout-body">
+        <aside class="sidebar">
+            <nav>
+                <ul class="sidebar-group">
+                    <li><a href="#" class="item active"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="#" class="item"><i class="fas fa-play"></i> Shorts</a></li>
+                    <li><a href="#" class="item"><i class="fas fa-layer-group"></i> Inscrições</a></li>
+                </ul>
+                <hr>
+
+                <div class="sidebar-section-title"
+                    style="padding: 10px 24px; font-size: 14px; font-weight: bold; color: #606060;">Inscrições</div>
+                <ul class="sidebar-group">
+                    <li>
+                        <a href="https://www.youtube.com/@BagéTvOficial" target="_blank" class="item">
+                            <i class="fas fa-user-circle"></i> Bagé TV Oficial
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@debateraiz" target="_blank" class="item">
+                            <i class="fas fa-users"></i> Debate Raiz
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+
+                <ul class="sidebar-group">
+                    <li><a href="#" class="item"><i class="fas fa-history"></i> Histórico</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section class="gremio-info">
+                <h1 style="color: #0d47a1; font-size: 32px; margin-bottom: 20px;">Central do Grêmio Imortal</h1>
+
+                <h2 style="font-size: 18px; margin-bottom: 10px;">Jornada do Bagé - Grêmio x Confiança</h2>
+                <div
+                    style="margin-bottom: 30px; border-radius: 15px; overflow: hidden; max-width: 854px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/Ml7oaau13cs" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+
+                <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ccc;">
+
+                <h2 style="font-size: 18px; margin-bottom: 10px;">Transmissão Oficial - Grêmio FBPA</h2>
+                <div
+                    style="margin-bottom: 30px; border-radius: 15px; overflow: hidden; max-width: 854px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/rT5-0Qqym9c" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>
