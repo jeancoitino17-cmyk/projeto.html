@@ -16,8 +16,23 @@
 // alert("Nome digitado : " + nome )
 
 
-let nota1
-nota1 = prompt("Digite a primeira nota: ")
-nota1 = Number(nota1)
-nota1 = nota1 + 1
-alert(nota1)
+// let nota1
+//nota1 = prompt("Digite a primeira nota: ")
+// nota1 = Number(nota1)
+// nota1 = nota1 + 1
+// alert(nota1)
+
+// ====================================================
+// informações 
+let  vitorias, empates
+let pontos
+// leitura 
+vitorias =  prompt("Vitorias:")
+vitorias = Number(vitorias)
+
+enpates = Number(prompt("Empates: "))
+// processamentos
+pontos = vitorias*3 + empates  
+// saida
+alert("Total  de Pontos:" + pontos)
+// ===================================================
