@@ -1,0 +1,15 @@
+// informacoes
+let pesoBalança = 0;
+let taraCaminhao = 0;
+let pesoCarga;
+
+// entrada de dados
+pesoBalança = Number(prompt("Peso informado na balança (kg):"));
+taraCaminhao = Number(prompt("Tara do caminhão (kg):"));
+
+// processamento
+pesoCarga = pesoBalança - taraCaminhao;
+
+// saida
+console.log("--- Conferência Telles Transportes ---");
+console.log("O peso da carga é: " + pesoCarga + " kg");
