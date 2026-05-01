@@ -1,0 +1,12 @@
+body{
+    background-color:rgb(20, 230, 230);
+}
+
+button{
+    background-color: rgb(7, 3, 3);
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
