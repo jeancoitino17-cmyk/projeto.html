@@ -4,10 +4,10 @@ function generateNumber() {
 
     const result = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    // Lógica para verificar se é par ou ímpar
+
     if (result % 2 === 0) {
-        alert(`O número ${result} é PAR`);
+        alert(`O número ${result} é True`);
     } else {
-        alert(`O número ${result} é ÍMPAR`);
+        alert(`O número ${result} é False`);
     }
 }

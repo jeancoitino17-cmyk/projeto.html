@@ -5,7 +5,7 @@ function calcularPrecoVenda() {
     let saida = document.getElementById("maquina de fumaça");
 
     // Entrada
-    precoCusto = Number(prompt("Qual o valor de custo da obra (R$)?"));
+    precoCusto = Number(prompt("Qual o valor de custo da obra de arte ?"));
 
     // Processamento:
     precoVenda = precoCusto * 3;
@@ -13,7 +13,7 @@ function calcularPrecoVenda() {
     // Saída 
     saida.innerHTML = `<strong>Obra de Arte - Romero Brique</strong><br>
       Custo: R$ ${precoCusto.toFixed(2)}<br>
-      Preço de Venda (200% lucro): <strong>R$ ${precoVenda.toFixed(2)}</strong>`;
+      Preço de Venda (200% lucro) =  ${precoVenda.toFixed(2)}`;
     saida.style.color = "darkblue";
 }
 
@@ -32,9 +32,13 @@ function controleProvisoes() {
     if (numeroMarujos >= 10 && quantidadeComida >= comidaNecessaria) {
         let diasExtras = Math.floor(quantidadeComida / comidaNecessaria) - 1;
         saida.innerHTML = "Provisões suficientes. Rumo ao horizonte";
+        saida.style.color = "black";
     } else {
         saida.innerHTML = "Algo está errado. Posseidom não quer ninguém no mar hoje.";
+        saida.style.color = "red";
     }
+
+    
 }
 
 function recrutarMarujo() {
@@ -45,16 +49,18 @@ function recrutarMarujo() {
 
     // Entrada
     idade = Number(prompt("Idade do aspirante?"));
-    sabeNadar = confirm("Sabe nadar?");
-    temRecomendacao = confirm("Tem carta de recomendação?");
+    sabeNadar = prompt("Sabe nadar?");
+    temRecomendacao = prompt("Tem carta de recomendação?");
 
     // Processamento
-    if (sabeNadar && idade > 16) {
-        saida.innerHTML = "Aprovado para o navio!";
-    } else if (!sabeNadar && temRecomendacao && idade >= 14) {
+    if (sabeNadar === "sim" && idade > 16) {
+        saida.innerHTML = "Aprovado para o navio. Bem-vindo à tripulação!";
+    } else if (sabeNadar === "sim" && temRecomendacao === "sim" && idade >= 14) {
         saida.innerHTML = "Aprovado sob recomendação. Monitorar nas primeiras viagens.";
+         saida.style.color = "blue";
     } else {
         saida.innerHTML = "Reprovado. Volte quando estiver mais preparado para o mar.";
+        saida.style.color = "red";
     }
 }
 function verificarFumaca() {
@@ -81,11 +87,11 @@ function verificarFumaca() {
 
     // Entrada
 
-    estaGripado = confirm("Sarumano, você está gripado?");
+    estaGripado = prompt(" O Sarumano está gripado?");
     tempoViagem = Number(prompt("Qual o tempo de viagem em minutos?"));
 
     // Processamento 
-    if (!estaGripado && tempoViagem < 45) {
+    if (!estaGripado  === "sim" && tempoViagem < 45) {
         saida.innerHTML = "Viagem autorizada. Rumo ao show!";
         saida.style.color = "blue";
     } else {
@@ -100,21 +106,26 @@ function verificarEntradaPalco() {
     let saida = document.getElementById("maquina de fumaça");
 
     // Entrada
-    somFuncionando = confirm("O sistema de som está funcionando?");
-    figurinoCompleto = confirm("O figurino está completo (com o chapéu)?");
+    somFuncionando = prompt("O sistema de som está funcionando?");
+    figurinoCompleto = prompt("O figurino está completo (com o chapéu)?");
 
     // Processamento
-    if (somFuncionando && figurinoCompleto) {
+    if (somFuncionando === "sim" && figurinoCompleto === "sim") {
         saida.innerHTML = "Palco liberado para Sarumano! Luzes, câmera, ilusão!";
+        saida.style.color = "blue";
     }
-    else if (!somFuncionando && figurinoCompleto) {
+    else if (somFuncionando === "não" && figurinoCompleto === "sim") {
         saida.innerHTML = "Sem som. Realizar apresentação alternativa no salão.";
+        saida.style.color = "orange";
     }
-    else if (somFuncionando && !figurinoCompleto) {
+    else if (somFuncionando === "sim" && figurinoCompleto === "não") {
+     
         saida.innerHTML = "Faltando parte do figurino. Te vira no improviso!";
+        saida.style.color = "green";
     }
     else {
         saida.innerHTML = "Apresentação cancelada. Hora da mágica de desaparecer…";
+        saida.style.color = "red";
     }
 }
 function verificarTransporte() {
@@ -123,11 +134,11 @@ function verificarTransporte() {
     let saida = document.getElementById("maquina de fumaça");
 
     // Entrada
-    emManutencao = confirm("O sistema está em manutenção?");
-    emergenciaAtiva = confirm("Existe uma emergência ativa no parque?");
+    emManutencao = prompt("O sistema está em manutenção?");
+    emergenciaAtiva = prompt("Existe uma emergência ativa no parque?");
 
     // Processamento
-    if (!emManutencao && !emergenciaAtiva) {
+    if (emManutencao === "sim" && emergenciaAtiva === "não") {
         saida.innerHTML = "Transporte liberado para uso.";
     } else {
         saida.innerHTML = "Transporte indisponível por motivo de segurança.";
@@ -139,19 +150,19 @@ function acessarCentroComando() {
     let saida = document.getElementById("maquina de fumaça");
 
     // Entrada
-    crachaValido = confirm("O crachá está válido?");
-    digitalReconhecida = confirm("A digital foi reconhecida pelo sensor?");
+    crachaValido = prompt("O crachá está válido?");
+    digitalReconhecida = prompt("A digital foi reconhecida pelo sensor?");
 
     // Processamento (Refatorado para diagnósticos específicos)
-    if (crachaValido && digitalReconhecida) {
+    if (crachaValido === "sim" && digitalReconhecida === "sim") {
         saida.innerHTML = "✅ Acesso liberado ao Centro de Comando";
         saida.style.color = "green";
     }
-    else if (!crachaValido && digitalReconhecida) {
+    else if (crachaValido === "não" && digitalReconhecida === "sim") {
         saida.innerHTML = "🪪 Crachá inválido. Dirija-se à recepção";
         saida.style.color = "orange";
     }
-    else if (crachaValido && !digitalReconhecida) {
+    else if (crachaValido === "sim" && digitalReconhecida === "não") {
         saida.innerHTML = "☝️ Falha na digital. Tente novamente ou chame o suporte";
         saida.style.color = "orange";
     }
