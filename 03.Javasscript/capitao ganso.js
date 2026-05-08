@@ -1,7 +1,66 @@
 let resposta = document.getElementById('resultado')
 
 
-function verificarMeta(){
+function verificarCorridaLuz() {
+    // - infos -
+    let distancia, velocidadeLuz, tempoSegundos;
+    let mensagem = '';
+
+    // - entradas -
+    distancia = Number(prompt("Distância (km): "));
+    velocidadeLuz = 300000;
+
+    // - processamento -
+    if (distancia <= 0 || isNaN(distancia)) {
+        resposta.innerHTML = "<br>⚠️ Insira uma distância válida!";
+        return;
+    }
+
+    tempoSegundos = distancia / velocidadeLuz;
+
+    // ETAPA 1: Ajuste para mostrar números muito pequenos
+    let segundosFormatados = tempoSegundos < 1 ? tempoSegundos.toFixed(4) : tempoSegundos.toLocaleString();
+
+    mensagem = `<br>🚀 <b>Resultados da Viagem:</b>`;
+    mensagem += `Segundos: ${segundosFormatados} s<br>`;
+
+    // verficar temposegundos 
+    if (tempoSegundos >= 60) {
+        let minutos = tempoSegundos / 60;
+        mensagem = `Minutos: ${minutos.toFixed(2)} min<br>`;
+
+        //  verificar minutos
+        if (minutos >= 60) {
+            let horas = minutos / 60;
+            mensagem = `Horas: ${horas.toFixed(2)} h<br>`;
+
+        // verificar hora
+            if (horas >= 24) {
+                let dias = horas / 24;
+                mensagem = `Dias: ${dias.toFixed(2)} dias<br>`;
+
+                // verificar dias
+                if (dias >= 30) {
+                    let meses = dias / 30;
+                    mensagem = `Meses: ${meses.toFixed(2)} meses<br>`;
+
+                    // verificar meses
+                    if (meses >= 12) {
+                        let anos = meses / 12;
+                        mensagem = `Anos: ${anos.toFixed(2)} anos<br>`;
+                    }
+                }
+            }
+        }
+    }
+
+    // - saídas -
+    resposta.innerHTML = mensagem;
+}
+
+
+
+function verificarMeta() {
     // infos
     let totalBruto, premiacoes, presentes, comissoes, lucro
     let meta
@@ -14,66 +73,66 @@ function verificarMeta(){
     // processamento
     lucro = totalBruto - premiacoes - presentes - comissoes
     let mensagem = ''
-    if(lucro >= meta){
+    if (lucro >= meta) {
         // bateu a meta - 
-        mensagem = '👵Batemos a meta, lucro de R$' + lucro.toFixed(2).replace('.',',')
-    }else{
+        mensagem = '👵Batemos a meta, lucro de R$' + lucro.toFixed(2).replace('.', ',')
+    } else {
         // não bateu a meta
-        if(lucro > 0){
+        if (lucro > 0) {
             // sem meta mas com lucro
-            mensagem = 'Não batemos a meta, mas tivemos lucro de R$' + lucro.toFixed(2).replace('.',',')
-        }else{
+            mensagem = 'Não batemos a meta, mas tivemos lucro de R$' + lucro.toFixed(2).replace('.', ',')
+        } else {
             // sem meta e prejuízo
             let prejuizo = lucro * -1
-            mensagem = '💀☠️⚔️🗡️🔫🦵Não batemos a meta e ainda tivemos prejuízo de R$' + prejuizo.toFixed(2).replace('.',',')
+            mensagem = '💀☠️⚔️🗡️🔫🦵Não batemos a meta e ainda tivemos prejuízo de R$' + prejuizo.toFixed(2).replace('.', ',')
         }
     }
     // saídas
-    resposta.innerHTML = "<br>Lucro de hoje: R$" + lucro.toFixed(2).replace('.',',') + 
-    '<br>' + mensagem
+    resposta.innerHTML = "<br>Lucro de hoje: R$" + lucro.toFixed(2).replace('.', ',') +
+        '<br>' + mensagem
 
-    
+
 }
 
 
-function revelarRecreio(){
+function revelarRecreio() {
     document.getElementById('resultado').innerHTML =
-    '<br>Início: 20:30' + 
-    '<br>Fim: 20:45' + 
-    '<br>Chamada: 20:50'
+        '<br>Início: 20:30' +
+        '<br>Fim: 20:45' +
+        '<br>Chamada: 20:50'
 }
 
-function calcularParImpar(){
+function calcularParImpar() {
     let n = Number(prompt("Digita número, meu consagrado:"))
-    if(n%2 == 0){
+    if (n % 2 == 0) {
         alert("Par")
-    }else{
+    } else {
         alert("Ímpar")
     }
 }
 
 
-function mostrarDiaDaSemana(){
+function mostrarDiaDaSemana() {
     // infos
     let numero, dia
     // leitura
     numero = Number(prompt("Digita o número: "))
     // processamento
-    if(numero == 1){
+    if (numero == 1) {
         dia = "Domingo"
-    }else if(numero == 2){
+    } else if (numero == 2) {
         dia = "Segunda"
-    }else if(numero == 3){
+    } else if (numero == 3) {
         dia = "Terça"
-    }else if(numero == 4){
+    } else if (numero == 4) {
         dia = "Quarta"
-    }else if(numero == 5){
+    } else if (numero == 5) {
         dia = "Quinta"
-    }else if(numero == 6){
+    } else if (numero == 6) {
         dia = "Sexta"
-    }else if(numero == 7){
+    } else if (numero == 7) {
         dia = "Sábado"
-    }else{
+    } else {
         dia = "Erro #404, dia não encontrado."
     }
     // saídas
@@ -97,12 +156,12 @@ function verificarCreditoAvalon() {
         alert("🚨 Erro: Informe valores válidos e maiores que zero!");
         saida.innerHTML = "Operação cancelada: dados inválidos.";
         saida.style.color = "red";
-        return; 
+        return;
     }
 
     let montanteTotal = valorEmprestimo * Math.pow((1 + taxaJuros), parcelas);
     let valorPrestacao = montanteTotal / parcelas;
-    
+
     // processamento 
     let limiteSalarial = salario * 0.30;
 
@@ -208,7 +267,7 @@ function verificarFumaca() {
 
     // Entrada
 
-    estaGripado = confirm("Sarumano, você está gripado?");
+    estaGripado = prompt("Sarumano, você está gripado?");
     tempoViagem = Number(prompt("Qual o tempo de viagem em minutos?"));
 
     // Processamento 
