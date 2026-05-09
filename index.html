@@ -1,23 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-br"> 
+<html lang="en">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
-    <title>Dev Sorteio</title>
-</head> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <title>DevClube store</title>
+</head>
+
 <body>
-    <img src="./img/dev_sorteio.png" alt="Logo Sorteio">
+    <header>
+        <div class="logo">DevClube store</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h2>Sortear um Número</h2>
-    
-    <div>
-        <input placeholder="par" class="input-min" type="number">
-        <input placeholder="impar" class="input-max" type="number">
-    </div>
+    <main class="container">
+        <div class="tech-circle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
 
-    <button onclick="generateNumber()">Sortear</button>
+        <div class="list">
+            <div class="item active">
 
-    <script src="javascript.js"></script>
+                <div class="produc-img">
+                    <img src="./img/apple-watch.png" alt="Apple Watch">
+                </div>
+                <div class="content">
+                    <p class="product-tag">novo lançamento</p>
+                    <p class="product-name">Apple Watch Series 7</p>
+                    <p class="description"> o smartwatch mais avançado do mercado monitoramento completo de saúde, GPS
+                        integrado, tela AMOLED de alta resolução e bateria de longa duração.perfeito para acompanhar seu
+                        estilo de vida.</p>
+                    <button class="btn">saiba mais</button>
+
+                </div>
+
+            </div>
+
+            <div class="item">
+                <div class="produc-img">
+                    <img src="img/air-pods.png" alt="air pods pro">
+                </div>
+                <div class="content">
+                    <p class="product-tag">som premiun</p>
+                    <p class="product-name">Air Pods Pro max</p>
+                    <p class="description"> experimente o som em sua forma mais pura. cancelamento de ruído adaptativo e
+                        qualidade de áudio superior e design inovador para o maximo conforto. sua música nunca sou tão
+                        bem.</p>
+                    <button class="btn">saiba mais</button>
+
+                </div>
+
+            </div>
+
+            <div class="item">
+                <div class="produc-img">
+                    <img src="./img/vision-pro.png" alt="vision pro ">
+                </div>
+
+                <div class="content">
+                    <p class="product-tag">alta performance</p>
+                    <p class="product-name">Vision Pro </p>
+                    <p class="description"> o vision pro tem realidade aumentada integrada e tela de alta resolução com
+                        apple: e inovação a os alcances dos seus olhos.</p>
+                    <button class="btn">saiba mais</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow">
+            <button class="arrow-btn" id="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff"
+                    class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                </svg>
+            </button>
+            <button class="arrow-btn" id="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff"
+                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="indicators">
+            <div class="numbers">01</div>
+            <div class="dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+
+        </div>
+    </main>
 </body>
+<script src="./scripts.js"></script>
+
+>>>>>>> cbfc1f5 (novo projeto)
 </html>
