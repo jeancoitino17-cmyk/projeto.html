@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../repos"
+		},
+		{
+			"path": "../YouTube"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "nubank"
+	}
+}
