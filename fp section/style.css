@@ -112,6 +112,8 @@ header nav ul li a:hover {
     border-radius: 5px;
     font-weight: 700;
     cursor: pointer;
+    background: linear-gradient(90deg, #00f7ff, #0066ff);
+    border-radius: 30px;
 }
 
 .arrow {
@@ -140,16 +142,20 @@ header nav ul li a:hover {
 
 .indicators {
     position: absolute;
-    bottom: 50px;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 5;
 }
 
 .numbers {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Orbitron';
-    opacity: 0.1;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.2);
 }
 
 .dots {
