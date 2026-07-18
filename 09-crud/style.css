@@ -1,31 +1,67 @@
+:root {
+  /* --- CORES PRINCIPAIS (BRANDING) --- */
+  --color-primary: #2a4736;       /* Verde Floresta/Selva - Para cabeçalhos e identidades */
+  --color-secondary: #d97706;     /* Âmbar/Terracota - Para botões de destaque, links e badges */
+  --color-accent: #eab308;        /* Amarelo Expedição - Para detalhes menores, avaliações (estrelas) e alertas */
+
+  /* --- CORES DE FONDO (BACKGROUNDS) --- */
+  --color-bg-main: #fcfbf7;       /* Branco Osso/Areia bem claro - Fundo principal do site (descansa os olhos) */
+  --color-bg-surface: #ffffff;    /* Branco Puro - Para os cards das miniaturas e seções destacadas */
+  --color-bg-dark: #1e293b;       /* Cinza Escuro Mineral - Para o rodapé (footer) ou modo escuro */
+
+  /* --- CORES DE TEXTO --- */
+  --color-text-main: #334155;     /* Grafite Escuro - Texto principal (ótima legibilidade) */
+  --color-text-muted: #64748b;    /* Cinza Médio - Para textos secundários, escala da miniatura ou descrições longas */
+  --color-text-light: #f8fafc;    /* Branco Suave - Para textos em cima de botões ou fundos escuros */
+
+  /* --- BORDAS E DIVISORES --- */
+  --color-border: #e2e8f0;         /* Cinza Claro - Para divisórias sutis e contorno dos cards */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-bg-surface);
     padding: 20px;
     text-align: center;
+    margin: 0; 
 }
 
 h1 {
     color: #333;
+    margin-bottom: 10px;
 }
 
-div{
+
+div {
     color: #666;
     margin-bottom: 30px;
 }
 
 
-.container {
+#painel-dinos, .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    max-width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 10px;
+}
+
+
+.card-dino {
+    background-color: rgb(205, 226, 226);
+  
+    max-width: 100%; 
+    padding: 20px;
+    border-radius: 10px;
+    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    box-sizing: border-box; 
 }
 
 
 button {
-    padding: 15px;
+    padding: 12px 20px;
     font-size: 14px;
     font-weight: bold;
     color: white;
@@ -34,8 +70,8 @@ button {
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.2s, transform 0.1s;
-    margin-bottom: 8px; /* Cria um espaçamento de 8px embaixo de cada botão */
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.1s;
+    margin: 5px; 
 }
 
 
@@ -43,11 +79,13 @@ button {
 button:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 
 button:active {
     transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -59,3 +97,4 @@ button.danger:hover {
     background-color: #bd2130;
 }
 
+    

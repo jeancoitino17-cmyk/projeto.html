@@ -9,10 +9,12 @@
 <body>
     <h1>CRUD</h1>
 
-<div id="form">
-    <div class="container-inputs"></div>
-   <label for="">Nome</label>
-   <input id="input-nome" type="text">
+    <div id="form">
+     
+        <div class="container-inputs">
+            <label for="input-nome">Nome</label>
+            <input id="input-nome" type="text">
+        </div>
 
     <div class="container-inputs"></div>
    <label for="">Altura</label>
@@ -26,14 +28,19 @@
    <label for="">Custo</label>
    <input id="input-custo" type="text">
 
+    <div class="container-inputs"></div>
+   <label for="">id</label>
+   <input id="input-id" type="number">
+
 </div>
 <button onclick="cadastrarDino()">+</button>
-<hr>
-<hr>
-
-<button onclick="mostraTodos() "> Mostar todos os dinos </button>
+<button onclick="salvardino()">++</button>
+<button onclick="excluirDino()">🗑️</button>
+<div id="painel-botoes">
+<button onclick="mostrarTodos() "> Mostar todos os dinos </button>
 <button onclick="teste()">teste</button>
-<hr><hr>
+<button onclick="pesquisar()">🔎</button>
+</div>
 
 <div id="painel-dinos">
 

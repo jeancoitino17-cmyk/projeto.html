@@ -72,6 +72,12 @@ const personagensc = [
     "Junin",
     "Padre Ernan Buco"
 ];
+const personagensac = [
+    "Rivaldo Jesus",
+    "Kowalski",
+    "GENéZio",
+    "Waldisney"
+];
 
 function adicionarPersonagens() {
     personagens.push('Gill Bates');
@@ -136,7 +142,7 @@ function adicionarvarios() {
     console.log(personagenssa)
 }
 
-function descobrirIndice() {
+function descobrirIndicew() {
     const indiceWalt = personagensn.indexOf("Waldisney");
     console.log("O indice do Waldisney é:", indiceWalt);
 }
@@ -170,4 +176,16 @@ function autulizarPersonagens(){
     personagensc.push("Dona Bete");
     personagensc.unshift("Mônica");
     console.log(personagensc)
+}
+
+function gerenciarElementos(){
+    personagensac.shift("Rivaldo Jesus")
+    personagensac.pop("Waldisney")
+    console.log(personagensac)
+}
+
+
+function descobrirIndiceG() {
+    const indiceGEN = personagensn.indexOf("GENéZio");
+    console.log("O indice do GENéZio é:", indiceGEN);
 }
