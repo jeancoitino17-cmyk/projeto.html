@@ -1,0 +1,529 @@
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.2);
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+
+main {
+    display: block;
+    width: 100%;
+}
+
+section {
+    padding: 6rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* ==================== COMPONENTES REUTILIZÁVEIS ==================== */
+.btn {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 1.5rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    display: inline-block;
+    transition: 0.2s linear;
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+    background-color: #bfa075;
+}
+
+.title {
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.title span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 9rem;
+}
+
+.header .logo img {
+    height: 10rem;
+    width: auto;
+    margin-bottom: -2.5rem;
+    cursor: pointer;
+}
+
+.header .nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.header .nav-list li {
+    padding: 0 1.5rem;
+}
+
+.header .nav-list a {
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.header .nav-list a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.header .icons img {
+    cursor: pointer;
+    margin-left: 2rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    filter: brightness(0) invert(1);
+}
+
+/* ==================== HOME ==================== */
+.home-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("img/home-img.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 9rem;
+    min-height: 100vh;
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: calc(100vh - 9rem);
+}
+
+.content {
+    flex: 0 1 60rem;
+    padding-left: 4rem;
+}
+
+.content h3 {
+    font-size: 4.2rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.content p {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 2rem 0;
+}
+
+/* ==================== SEÇÃO SOBRE NÓS ATUALIZADA ==================== */
+.about-row {
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 5rem;
+    flex-wrap: wrap;
+    padding: 5rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+}
+
+.media-container.single-video {
+    flex: 1 1 35rem;
+    /* Ajustado proporcionalmente para equilibrar com o texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Caixa contenedora proporcional para o vídeo vertical */
+.video-local-wrapper {
+    width: 100%;
+    max-width: 320px;
+    /* Aumentado o tamanho máximo para melhor visibilidade */
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #000;
+}
+
+/* Garante que o vídeo se estenda a 100% da área útil interna */
+.video-local-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.about-text {
+    flex: 1 1 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text h3 {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+.about-text p {
+    font-size: 1.6rem;
+    color: #ccc;
+    padding-bottom: 2rem;
+    line-height: 1.8;
+}
+
+/* ==================== MENU ==================== */
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2.5rem;
+}
+
+.menu .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu .box-container .box img {
+    max-height: 18rem;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 2rem;
+}
+
+.menu .box-container .box h3 {
+    color: #fff;
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.menu .box-container .box .price {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.menu .box-container .box .price samp {
+    font-size: 1.6rem;
+    color: #666;
+    text-decoration: line-through;
+    margin-left: 1rem;
+}
+
+.menu .box-container .box:hover {
+    border-color: var(--main-color);
+}
+
+
+/* Estilização para o card de vídeo no Menu */
+.menu .box-container .video-product-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Container para limitar o tamanho do vídeo vertical */
+.product-video-wrapper {
+    width: 100%;
+    height: 25rem;
+    /* Ajuste essa altura para bater com o tamanho padrão das suas fotos de produto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: .5rem;
+    background-color: #000;
+    margin-bottom: 1.5rem;
+}
+
+.product-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Faz o vídeo preencher a caixinha elegantemente sem distorcer */
+}
+
+.menu .box .product-img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+
+/* ==================== REVIEWS ==================== */
+.reviews .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2.5rem;
+}
+
+
+
+.reviews .box-container .box {
+    border: var(--border);
+    text-align: center;
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews .box-container .box .quote-icon {
+    font-size: 10rem;
+    color: var(--main-color);
+    line-height: 1;
+}
+
+.reviews .box-container .box p {
+    font-size: 1.5rem;
+    color: #aaa;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.reviews .box-container .box .client-img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviews .box-container .box h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+.reviews .box-container .box .stars {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.reviews .box-container .box .stars img {
+    width: 2.2rem;
+    height: 2.2rem;
+    filter: brightness(0) invert(1);
+}
+
+/* ==================== SEÇÃO ENDEREÇO ==================== */
+.address {
+    width: 100%;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: var(--border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: var(--black);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    background-color: var(--black);
+    border-top: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.footer .share {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer .share img {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* ==================== WHATSAPP FLUTUANTE ==================== */
+.whatsapp-floating {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background-color: #25d366;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.whatsapp-floating img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+/* ==================== RESPONSIVIDADE COMPLETA ==================== */
+@media (max-width: 991px) {
+    .content {
+        padding-left: 2rem;
+    }
+
+    .about-row {
+        padding: 3rem;
+        gap: 3rem;
+    }
+
+    .media-container.single-video {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .nav-list {
+        display: none;
+    }
+
+    #home {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content {
+        padding-left: 0;
+    }
+
+    .content h3 {
+        font-size: 3rem;
+    }
+}
+
+/* ==========================================================================
+   AJUSTES DE ALINHAMENTO, ESPAÇAMENTO E CONTRASTE (MENU CHACO)
+   ========================================================================== */
+
+/* 1. Padroniza a altura de todas as caixas do menu para os botões ficarem alinhados */
+.menu .box-container .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* 2. Força todas as imagens de produtos a terem o mesmo tamanho exato sem distorcer */
+.menu .box-container .box .product-img {
+    width: 100%;
+    height: 22rem;
+    /* Mantém um padrão elegante */
+    object-fit: cover;
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 3. Ajuste do contêiner do mini vídeo para casar perfeitamente com as imagens */
+.product-video-wrapper {
+    width: 100%;
+    height: 22rem;
+    /* Rigorosamente a mesma altura das imagens de produto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: .5rem;
+    background-color: #000;
+    margin-bottom: 1.5rem;
+}
+
+.product-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 4. Aumenta o espaçamento (Margin Right) e melhora a nitidez/cor dos preços */
+.menu .box-container .box .price {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    /* Preço atual em branco destacado */
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Preço antigo riscado: ganha margem à direita e cor cinza clara para leitura perfeita */
+.menu .box-container .box .price samp {
+    font-size: 1.5rem;
+    color: #aaa;
+    /* Cinza claro com ótimo contraste no fundo escuro */
+    text-decoration: line-through;
+    margin-left: 1.5rem;
+    /* Margem para afastar do preço principal */
+    font-weight: 400;
+}
+
+/* 5. Correção de contraste do botão amarelo (Adicione ao Carrinho) */
+.menu .box-container .box .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #111 !important;
+    /* Força o texto interno a ficar escuro (preto/marrom) */
+    font-weight: 700;
+    /* Texto em negrito para saltar aos olhos */
+    letter-spacing: 0.1rem;
+    /* Espaçamento sutil entre as letras do botão */
+    transition: background 0.3s ease;
+}
+
+/* Efeito de passar o mouse no botão para ficar profissional */
+.menu .box-container .box .btn:hover {
+    background: #fff;
+    color: #000 !important;
+}
