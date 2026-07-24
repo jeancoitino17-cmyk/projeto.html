@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -36,7 +35,9 @@ button {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background 0.2s, transform 0.1s;
+    margin-bottom: 8px; /* Cria um espaçamento de 8px embaixo de cada botão */
 }
+
 
 
 button:hover {
