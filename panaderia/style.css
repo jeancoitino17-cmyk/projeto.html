@@ -167,18 +167,18 @@ section {
 
 .media-container.single-video {
     flex: 1 1 35rem;
-    /* Ajustado proporcionalmente para equilibrar com o texto */
+
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-/* Caixa contenedora proporcional para o vídeo vertical */
+
 .video-local-wrapper {
     width: 100%;
     max-width: 320px;
-    /* Aumentado o tamanho máximo para melhor visibilidade */
+
     border-radius: 2rem;
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
@@ -186,7 +186,7 @@ section {
     background-color: #000;
 }
 
-/* Garante que o vídeo se estenda a 100% da área útil interna */
+
 .video-local-wrapper video {
     width: 100%;
     height: auto;
@@ -263,18 +263,18 @@ section {
 }
 
 
-/* Estilização para o card de vídeo no Menu */
+
 .menu .box-container .video-product-box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* Container para limitar o tamanho do vídeo vertical */
+
 .product-video-wrapper {
     width: 100%;
     height: 25rem;
-    /* Ajuste essa altura para bater com o tamanho padrão das suas fotos de produto */
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,7 +288,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Faz o vídeo preencher a caixinha elegantemente sem distorcer */
+    
 }
 
 .menu .box .product-img {
@@ -298,7 +298,7 @@ section {
 }
 
 
-/* ==================== REVIEWS ==================== */
+
 .reviews .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -353,7 +353,7 @@ section {
     filter: brightness(0) invert(1);
 }
 
-/* ==================== SEÇÃO ENDEREÇO ==================== */
+
 .address {
     width: 100%;
 }
@@ -368,7 +368,7 @@ section {
     background-color: var(--black);
 }
 
-/* ==================== FOOTER ==================== */
+
 .footer {
     background-color: var(--black);
     border-top: var(--border);
@@ -387,7 +387,7 @@ section {
     height: 3rem;
 }
 
-/* ==================== WHATSAPP FLUTUANTE ==================== */
+
 .whatsapp-floating {
     position: fixed;
     bottom: 3rem;
@@ -407,7 +407,7 @@ section {
     height: 3.5rem;
 }
 
-/* ==================== RESPONSIVIDADE COMPLETA ==================== */
+
 @media (max-width: 991px) {
     .content {
         padding-left: 2rem;
@@ -442,11 +442,10 @@ section {
     }
 }
 
-/* ==========================================================================
-   AJUSTES DE ALINHAMENTO, ESPAÇAMENTO E CONTRASTE (MENU CHACO)
-   ========================================================================== */
 
-/* 1. Padroniza a altura de todas as caixas do menu para os botões ficarem alinhados */
+
+
+
 .menu .box-container .box {
     display: flex;
     flex-direction: column;
@@ -455,21 +454,21 @@ section {
     height: 100%;
 }
 
-/* 2. Força todas as imagens de produtos a terem o mesmo tamanho exato sem distorcer */
+
 .menu .box-container .box .product-img {
     width: 100%;
     height: 22rem;
-    /* Mantém um padrão elegante */
+   
     object-fit: cover;
     border-radius: .5rem;
     margin-bottom: 1.5rem;
 }
 
-/* 3. Ajuste do contêiner do mini vídeo para casar perfeitamente com as imagens */
+
 .product-video-wrapper {
     width: 100%;
     height: 22rem;
-    /* Rigorosamente a mesma altura das imagens de produto */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -485,44 +484,44 @@ section {
     object-fit: cover;
 }
 
-/* 4. Aumenta o espaçamento (Margin Right) e melhora a nitidez/cor dos preços */
+
 .menu .box-container .box .price {
     font-size: 2.2rem;
     font-weight: 700;
     color: #fff;
-    /* Preço atual em branco destacado */
+   
     padding: 1rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Preço antigo riscado: ganha margem à direita e cor cinza clara para leitura perfeita */
+
 .menu .box-container .box .price samp {
     font-size: 1.5rem;
     color: #aaa;
-    /* Cinza claro com ótimo contraste no fundo escuro */
+   
     text-decoration: line-through;
     margin-left: 1.5rem;
-    /* Margem para afastar do preço principal */
+ 
     font-weight: 400;
 }
 
-/* 5. Correção de contraste do botão amarelo (Adicione ao Carrinho) */
+
 .menu .box-container .box .btn {
     display: block;
     width: 100%;
     text-align: center;
     color: #111 !important;
-    /* Força o texto interno a ficar escuro (preto/marrom) */
+
     font-weight: 700;
-    /* Texto em negrito para saltar aos olhos */
+
     letter-spacing: 0.1rem;
-    /* Espaçamento sutil entre as letras do botão */
+   
     transition: background 0.3s ease;
 }
 
-/* Efeito de passar o mouse no botão para ficar profissional */
+
 .menu .box-container .box .btn:hover {
     background: #fff;
     color: #000 !important;

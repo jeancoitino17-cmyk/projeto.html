@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Segurança do trabalho </title>
 </head>
+
 <body>
+
+    <h1>Segurança do trabalho</h1>
     <div id="form"></div>
     <div class="container-inputss">
         <label for="input-nome">Nome</label>
@@ -14,21 +18,22 @@
     </div>
 
     <div class="container-inputs"></div>
-   <label for="">Data</label>
-   <input id="input-data" type="text">
+    <label for="">Data</label>
+    <input id="input-data" type="datetime-local">
 
-   <div class="container-inputs"></div>
-   <label for="">Validade</label>
-   <input id="input-validade" type="text">
-</div>
-<button onclick="cadastarEntrega()">🔎</button>
-<button onclick="verificarPendentes()">📁</button>
-<button onclick="verificarTreinamrnto()">📊</button>
-<div id="painel-botoes">
-<button onclick="realizados()">✔️</button>
-<script src="script.js"></script>
+    <div class="container-inputs"></div>
+    <label for="">Validade</label>
+    <input id="input-validade" type="text">
+    </div>
+    <button onclick="cadastarEntrega()">🔎</button>
+    <button onclick="verificar_Pendentes()">📁</button>
+    <button onclick="verificar_Treinamrnto()">📊</button>
+    <div id="painel-botoes">
+        <button onclick="verificar_Realizados()">✔️</button>
+        <script src="script.js"></script>
 
 
-</div>
+    </div>
 </body>
+
 </html>

@@ -10,41 +10,49 @@
     <h1>CRUD</h1>
 
     <div id="form">
-     
         <div class="container-inputs">
             <label for="input-nome">Nome</label>
             <input id="input-nome" type="text">
         </div>
+        <div class="container-inputs">
+            <label for="">Altura</label>
+            <input id="input-altura" type="number">
+        </div>
+        <div class="container-inputs">
+            <label for="">Cor</label>
+            <input id="input-cor" type="text">
+        </div>
+        <div class="container-inputs">
+            <label for="">Custo</label>
+            <input id="input-custo" type="number">
+        </div>
+        <div class="container-inputs" id="div-id">
+            <label for="">ID</label>
+            <input id="input-id" type="number">
+        </div>
 
-    <div class="container-inputs"></div>
-   <label for="">Altura</label>
-   <input id="input-altura" type="text">
+        <button onclick="cadastrarDino()">+</button>
+        <button onclick="salvarDino()">💾</button>
+        <button onclick="excluirDino()">🗑️</button>
 
-    <div class="container-inputs"></div>
-   <label for="">Cor</label>
-   <input id="input-cor" type="text">
+    </div>
+   
 
-   <div class="container-inputs"></div>
-   <label for="">Custo</label>
-   <input id="input-custo" type="text">
 
-    <div class="container-inputs"></div>
-   <label for="">id</label>
-   <input id="input-id" type="number">
+  
+    <div id="painel-botoes">
+        <button onclick="mostrarTodos()">Mostrar todos dinos</button>
+        <button onclick="testar()">Teste</button>
+        <button onclick="pesquisar()">🔍</button>
 
-</div>
-<button onclick="cadastrarDino()">+</button>
-<button onclick="salvardino()">++</button>
-<button onclick="excluirDino()">🗑️</button>
-<div id="painel-botoes">
-<button onclick="mostrarTodos() "> Mostar todos os dinos </button>
-<button onclick="teste()">teste</button>
-<button onclick="pesquisar()">🔎</button>
-</div>
+    </div>
+ 
 
-<div id="painel-dinos">
+    <div id="painel-dinos">
+        tem nada dentro
+    </div>
 
-</div>
+
     
     <script src="scrip.js"></script>
 </body>

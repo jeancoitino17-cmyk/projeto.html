@@ -15,23 +15,22 @@
 
 let dinos = []
 
-function salvardino() {
+function salvarDados(){
     localStorage.setItem('dinos', JSON.stringify(dinos))
-
+    
     // let texto = JSON.stringify(dinos)
-    // localStorage.setItem("dinos" , texto)
+    // localStorage.setItem('dinos', texto)
 }
 
-function carregarDados() {
-    dinos = JSON.parse(localStorage.getItem('dinos'))
-
-    // let textolido = localStorage.getItem('dinos')
-    // dinos.JSON.parse(textolido)
-
-    console.log(dinos);
+function carregarDados(){
+    dinos = JSON.parse(localStorage.getItem('dinos')) || []
+    
+    // let textoLido = localStorage.getItem('dinos')
+    // dinos = JSON.parse(textoLido)
 }
 
 function cadastrarDino() {
+
     carregarDados()
 
     const novoDino = {
@@ -56,36 +55,40 @@ function limparFormulario() {
     document.getElementById('input-altura').value = ''
     document.getElementById('input-cor').value = ''
     document.getElementById('input-custo').value = ''
+    document.getElementById('input-id').value = ''
 
     document.getElementById('input-nome').focus()
 }
 
-function mostrarTodos() {
+function mostrarTodos(){
+    document.getElementById('painel-dinos').innerHTML = '' 
 
-    document.getElementById("painel-dinos").innerHTML = "";
-
-    for (let i = 0; i < dinos.length; i++) {
-        document.getElementById("painel-dinos").innerHTML += `
-            <div class="card-dinos">
-                <h2>${dinos[i].nome}</h2>
-                <p>Altura: ${dinos[i].altura}m</p>
-                <p>Cor: ${dinos[i].cor}</p>
-                <p>Custo: R$ ${dinos[i].custo}</p>    
-                <p>ID: ${dinos[i].id}</p>    
-            </div>
-        `;
+    for(let i=0; i<dinos.length; i++){
+        // alert(dinos[i].nome)
+        document.getElementById('painel-dinos').innerHTML += 
+        `<div class="card-dino">
+            <h2>${dinos[i].nome}</h2>
+            <p>Altura: ${dinos[i].altura}</p>
+            <p>Cor: ${dinos[i].cor}</p>
+            <p>Custo: ${dinos[i].custo}</p>
+            <p>${dinos[i].id}</p>
+        
+        </div>
+        ` 
     }
 }
 
 
+function testar() {
+    
+    // window.location.href = 'teste.html'
 
+    carregarDados()
 
-function teste() {
+    localStorage.setItem('teste', 45)
 
-    localStorage.setItem("teste", 45)
-
-    let testeDeleitura = localStorage.getItem('teste')
-    console.log(testeDeleitura);
+    let testeDeLeitura = localStorage.getItem('teste')
+    console.log(testeDeLeitura);
 
     const dinos = [
         {
@@ -128,30 +131,35 @@ function teste() {
     mostrarTodos();
     console.log(dinos);
 }
-function pesquisar() {
+    
+
+function pesquisar(){
     let nomeProcurado = document.getElementById('input-nome').value
 
-    for (let i = 0; i < dinos.length; i++) {
-        if (nomeProcurado == dinos[i].nome) {
-            console.log(dinos[i].nome)
+    for(let i = 0; i<dinos.length; i++){
+        if(nomeProcurado == dinos[i].nome ){
+            console.log(dinos[i]);
             document.getElementById('input-altura').value = dinos[i].altura
             document.getElementById('input-cor').value = dinos[i].cor
             document.getElementById('input-custo').value = dinos[i].custo
             document.getElementById('input-id').value = dinos[i].id
             console.log(i);
         }
+        
     }
+
 }
 
-function salvardino() {
+function salvarDino(){
     let id = Number(document.getElementById('input-id').value)
-    for (let i = 0; i < dinos.length; i++) {
-        if (id == dinos[i].id) {
-            console.log(dinos[i].nome)
-            dinos[i].altura = document.getElementById('input-altura').value
-            dinos[i].cor = document.getElementById('input-cor').value
-            dinos[i].custo = document.getElementById('input-custo').value
-            dinos[i].id = document.getElementById('input-id').value
+
+    for(let i = 0; i<dinos.length; i++){
+        if(id == dinos[i].id ){
+            console.log(dinos[i]);
+            dinos[i].altura = document.getElementById('input-altura').value 
+            dinos[i].cor = document.getElementById('input-cor').value 
+            dinos[i].custo = document.getElementById('input-custo').value 
+            dinos[i].id = document.getElementById('input-id').value 
             console.log(i);
         }
     }
@@ -162,9 +170,12 @@ function salvardino() {
 
 function excluirDino() {
     let id = Number(document.getElementById('input-id').value)
-    for (let i = 0; i < dinos.length; i++) {
-        if (id == dinos[i].id) {
+
+    for(let i = 0; i<dinos.length; i++){
+        if(id == dinos[i].id ){
+            console.log(dinos[i]);
             dinos.splice(i, 1)
+            console.log(i);
         }
     }
 
